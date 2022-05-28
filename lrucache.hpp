@@ -6,10 +6,10 @@ class LRUCache: public Cache
 {
     private:
         LRUCache();
+        int size;
     public:
         LRUCache(t_list *lst, int cp);
         ~LRUCache();
-        void mp(int key, int value);
         void set(int key, int value);
 };
 

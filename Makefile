@@ -1,6 +1,6 @@
 NAME = cache
 
-SRCS = ${shell find "." -name *.c}
+SRCS = ${shell find "." -name "*.cpp"}
 
 OBJS = ${SRCS:.cpp=.o}
 

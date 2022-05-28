@@ -13,7 +13,7 @@ class Cache
         Cache();
         Cache(t_list *lst, int cp);
         ~Cache();
-        virtual void mp(int key, int value) = 0;
+        t_list *mp(int key, t_list *lst);
         virtual void set(int key, int value) = 0;
         int get(int key);
 };

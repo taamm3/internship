@@ -10,8 +10,7 @@ typedef struct node
 	struct node 	*prev;
 }	t_list;
 
-t_list	*find_element(int key, t_list *lst);
-void	ft_lstadd_front(t_list **lst, int data);
+void	ft_lstadd_front(t_list **lst, int key, int value);
 void	ft_lstdel(t_list **lst, t_list *del);
 
 #endif

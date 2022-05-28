@@ -1,22 +1,10 @@
 #include "lists.hpp"
 
-t_list	*find_element(int key, t_list *lst)
-{
-	t_list	*tmp = lst;
-
-	while (tmp)
-	{
-		if (key == tmp->key)
-			return (tmp);
-		tmp = tmp->next;
-	}
-	return (NULL);
-}
-
-void	ft_lstadd_front(t_list **lst, int data)
+void	ft_lstadd_front(t_list **lst, int key, int value)
 {
     struct node* newNode = new node;
-    newNode->key = data;
+    newNode->key = key;
+    newNode->value = value;
     newNode->next = *lst;
     newNode->prev = NULL;
 	if (*lst)
