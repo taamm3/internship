@@ -12,5 +12,6 @@ typedef struct node
 
 void	ft_lstadd_front(t_list **lst, int key, int value);
 void	ft_lstdel(t_list **lst, t_list *del);
+void	ft_delete_list(t_list *lst);
 
 #endif

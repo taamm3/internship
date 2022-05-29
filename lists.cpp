@@ -24,3 +24,15 @@ void	ft_lstdel(t_list **lst, t_list *del)
 		del->prev->next = del->next;
 	delete del;
 }
+
+void	ft_delete_list(t_list *lst)
+{
+	t_list	*tmp;
+
+	tmp = lst;
+	while (tmp)
+	{
+		ft_lstdel(&lst, tmp);
+		tmp = lst;
+	}
+}
