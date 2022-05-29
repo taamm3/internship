@@ -4,19 +4,19 @@
 
 class Cache
 {
-    private:
     protected:
         int cp;
         t_list *head;
         t_list *tail;
+        int size;
     public:
         Cache();
         Cache(t_list *lst, int cp);
         ~Cache();
         t_list *mp(int key, t_list *lst);
-        virtual void set(int key, int value) = 0;
+        void set(int key, int value);
         int get(int key);
+        virtual void update(int key) = 0;
 };
-
 
 #endif

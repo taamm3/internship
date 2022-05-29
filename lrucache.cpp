@@ -2,36 +2,22 @@
 
 LRUCache::LRUCache(){}
 
-LRUCache::LRUCache(t_list *lst, int cp): Cache(lst,cp)
-{
-    t_list *tmp = lst;
-    while(tmp)
-    {
-        size++;
-        tmp = tmp->next;
-    }
-}
+LRUCache::LRUCache(t_list *lst, int cp): Cache(lst,cp) {}
 
 LRUCache::~LRUCache(){}
 
-void LRUCache::set(int key, int value)
+void LRUCache::update(int key)
 {
+    int value;
     t_list *el = mp(key, head);
     if(!el)
+        return ;
+    if(el != head)
     {
-        if (size >= cp)
-        {
+        if(el == tail)
             tail = tail->prev;
-            ft_lstdel(&head, tail->next);
-            size--;
-        }
+        value = el->value;
+        ft_lstdel(&head, el);
+        ft_lstadd_front(&head, key, value);
     }
-    else
-    {
-        if(!el->next)
-            tail = tail->prev;
-        ft_lstdel(&head, el);   
-    }
-    ft_lstadd_front(&head, key, value);
-    size++;
 }
