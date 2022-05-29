@@ -2,40 +2,45 @@
 
 Clone the repository and move into the directory.
 Write "make" in your terminal to compile the code.
-In case my Makefile doesn't work on your OS write "c++ shell find "." -name "*.cpp" -o cache" instead.
+In case my Makefile doesn't work on your OS write:<br>
+> c++ *.cpp -o cache<br>
+
+instead.<br>
 Run the code by typing "./cache" in your terminal.
 Input one of the following test cases to see how the code works.
 
-Test cases
-1. the case of the subject
-INPUT
-3 1
-set 1 2
-get 1
-get 2
-OUTPUT
-2
--1
-2. a case to test what happens if a key is set more than once
-INPUT
-4 3
-set 3 5
-get 3
-set 3 8
-get 3
-OUTPUT
-5
-8
-3. a case to test what happens if the capacity is reached
-INPUT
-6 2
-set 1 2
-set 3 5
-get 1
-set 7 3
-get 7
-get 3
-OUTPUT
-2
-3
--1
+Test cases<br>
+1. the case of the subject<br>
+INPUT<br>
+3 1<br>
+set 1 2<br>
+get 1<br>
+get 2<br>
+OUTPUT<br>
+2<br>
+-1<br>
+
+2. a case to test what happens if a key is set more than once<br>
+INPUT<br>
+4 3<br>
+set 3 5<br>
+get 3<br>
+set 3 8<br>
+get 3<br>
+OUTPUT<br>
+5<br>
+8<br>
+
+3. a case to test what happens if the capacity is reached<br>
+INPUT<br>
+6 2<br>
+set 1 2<br>
+set 3 5<br>
+get 1<br>
+set 7 3<br>
+get 7<br>
+get 3<br>
+OUTPUT<br>
+2<br>
+3<br>
+-1<br>
